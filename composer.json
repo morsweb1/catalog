@@ -1,0 +1,16 @@
+{
+  "name": "vendor_name/catalogwithpages",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Alex",
+      "email": "morsan@yandex.ru"
+    }
+  ],
+  "require": {
+    "twig/twig": "v2.0.0",
+    "ext-pdo": "*"
+  }
+}
