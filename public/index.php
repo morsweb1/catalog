@@ -1,5 +1,19 @@
 <?php
 include_once '../config/server.php';
+include_once '../config/loadTwig.php';
 
-echo 'Hello everybody';
-//print_r($row);
+try {
+
+  $src = [
+    'title'=>'Каталог товаров',
+    'goods'=>$goods,
+    'count'=>count($goods)
+  ];
+
+  $template = $twig->render('index.tmpl', $src);
+  echo $template;
+
+} catch (Exception $e) {
+    die('Error: '.$e);
+}
+
