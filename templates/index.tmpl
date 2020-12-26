@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>{{ title }}</title>
+</head>
+<body>
+<div class="goods-wrp">
+  {% for g in goods %}
+    <div class="item" data-id="{{ g.id }}">
+      <img class="img" src="../images/{{ g.image }}" alt="{{ g.name }} photo">
+      <div class="wrp-txt">
+        <span class="name">{{ g.name }}</span>
+        <span class="desc">{{ g.short_desc }}</span>
+        <span class="desc">{{ g.full_desc }}</span>
+        <span class="price">{{ g.price }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<a href="?limit={{ count + 3 }}" class="btn">Показать еще</a>
+<a class="btn" href="index.php">Скрыть все</a>
+</body>
+</html>
